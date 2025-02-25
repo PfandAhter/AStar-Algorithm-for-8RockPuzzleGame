@@ -74,7 +74,12 @@ Return to step 2
 ![image](https://github.com/user-attachments/assets/852570f3-aebc-45b5-8d9b-2d08e2e60ce1)
 
 
+**States of processing**
+![image](https://github.com/user-attachments/assets/715dbb24-fe56-49e5-9e96-acca891401bd)
 
+
+**Final Screen**
+![image](https://github.com/user-attachments/assets/75d6000e-8dff-4b4f-ae9f-edd190c1ca9f)
 
 
 **Requirements**
