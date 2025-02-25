@@ -80,8 +80,8 @@ namespace AStarAlgorithmFor8PuzzleGame
 
                     if (tileValue != 0)
                     {
-                        int targetRow = 0;
-                        int targetColumn = 0;
+                        int targetRow = -1;
+                        int targetColumn = -1;
 
                         for (int m = 0; m < 3; m++)
                         {
@@ -95,7 +95,7 @@ namespace AStarAlgorithmFor8PuzzleGame
                                 }
                             }
 
-                            if (targetRow != 0)
+                            if (targetRow != -1)
                             {
                                 break;
                             }

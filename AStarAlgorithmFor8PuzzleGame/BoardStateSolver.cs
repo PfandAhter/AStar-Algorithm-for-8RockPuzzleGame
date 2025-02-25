@@ -36,7 +36,7 @@ namespace AStarAlgorithmFor8PuzzleGame
 
                 if (currentBoardState.isEqual(goalBoardState))
                 {
-                    Console.WriteLine("Goal Found");
+                    Console.WriteLine("Goal Board state Found !");
                     return reConstructPath(currentBoardState);
                 }
                 closeBoardStateList.Add(currentBoardState);
@@ -54,11 +54,11 @@ namespace AStarAlgorithmFor8PuzzleGame
                             break;
                         }
 
-                        if (closedBoardState.isEqual(goalBoardState))
+                        /*if (closedBoardState.isEqual(goalBoardState))
                         {
                             Console.WriteLine("Goal Board state found !");
                             return reConstructPath(currentBoardState);
-                        }
+                        }*/
                     }
 
                     if (skipBoardState)
@@ -84,6 +84,11 @@ namespace AStarAlgorithmFor8PuzzleGame
 
                             break;
                         }
+                    }
+
+                    if (!inEvaluableBoardState)
+                    {
+                        evaluableBoardStateList.Add(nextBoardState);
                     }
                 }
             }
