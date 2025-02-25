@@ -87,7 +87,6 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(278, 202);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // panel1
@@ -117,7 +116,6 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(278, 202);
             this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // panel3
@@ -137,7 +135,6 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(278, 202);
             this.button3.TabIndex = 0;
-            this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // panel4
@@ -157,7 +154,6 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(278, 202);
             this.button4.TabIndex = 0;
-            this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // panel5
@@ -177,7 +173,6 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(278, 202);
             this.button5.TabIndex = 0;
-            this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // panel6
@@ -198,7 +193,6 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(278, 202);
             this.button6.TabIndex = 0;
-            this.button6.Text = "button6";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // panel7
@@ -218,7 +212,6 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(278, 202);
             this.button7.TabIndex = 0;
-            this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // panel8
@@ -238,7 +231,6 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(278, 202);
             this.button8.TabIndex = 0;
-            this.button8.Text = "button8";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // panel9
@@ -258,7 +250,6 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(278, 202);
             this.button9.TabIndex = 0;
-            this.button9.Text = "button9";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // textBox1
@@ -427,40 +418,40 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(971, 20);
+            this.label1.Location = new System.Drawing.Point(1000, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 29);
+            this.label1.Size = new System.Drawing.Size(130, 29);
             this.label1.TabIndex = 36;
-            this.label1.Text = "Baslangic Durumu";
+            this.label1.Text = "Initial State";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(990, 255);
+            this.label2.Location = new System.Drawing.Point(1000, 255);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 29);
+            this.label2.Size = new System.Drawing.Size(125, 29);
             this.label2.TabIndex = 37;
-            this.label2.Text = "Bitis Durumu";
+            this.label2.Text = "Goal State";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(979, 440);
+            this.label3.Location = new System.Drawing.Point(967, 440);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 24);
+            this.label3.Size = new System.Drawing.Size(239, 24);
             this.label3.TabIndex = 38;
-            this.label3.Text = "Bos durum icin 0 yaziniz...";
+            this.label3.Text = "Enter 0 for the empty space";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(956, 440);
+            this.label4.Location = new System.Drawing.Point(944, 440);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 24);
             this.label4.TabIndex = 39;
@@ -475,7 +466,7 @@
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(247, 76);
             this.button_start.TabIndex = 40;
-            this.button_start.Text = "BASLA";
+            this.button_start.Text = "START";
             this.button_start.UseVisualStyleBackColor = false;
             this.button_start.Click += new System.EventHandler(this.button_start_Click);
             // 

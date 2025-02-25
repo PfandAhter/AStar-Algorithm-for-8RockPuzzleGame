@@ -102,44 +102,44 @@ namespace AStarAlgorithmFor8PuzzleGame
             try
             {
                 if(txtbxNumber.Equals("txtbxstart1") && (textBox1.Text == "" || textBox1.Text == null || !(int.TryParse(textBox1.Text, out int n1)))){
-                    throw new FormatException("1.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("1.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart2") && (textBox2.Text == "" || textBox2.Text == null || !(int.TryParse(textBox2.Text, out int n2))))
                 {
-                    throw new FormatException("1.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("1.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart3") && (textBox3.Text == "" || textBox3.Text == null || !(int.TryParse(textBox3.Text, out int n3))))
                 {
-                    throw new FormatException("1.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("1.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart4") && (textBox6.Text == "" || textBox6.Text == null || !(int.TryParse(textBox6.Text, out int n4))))
                 {
-                    throw new FormatException("2.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("2.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart5") && (textBox5.Text == "" || textBox5.Text == null || !(int.TryParse(textBox5.Text, out int n5))))
                 {
-                    throw new FormatException("2.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("2.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart6") && (textBox4.Text == "" || textBox4.Text == null || !(int.TryParse(textBox4.Text, out int n6))))
                 {
-                    throw new FormatException("2.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("2.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart7") && (textBox9.Text == "" || textBox9.Text == null || !(int.TryParse(textBox9.Text, out int n7))))
                 {
-                    throw new FormatException("3.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("3.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart8") && (textBox8.Text == "" || textBox8.Text == null || !(int.TryParse(textBox8.Text, out int n8))))
                 {
-                    throw new FormatException("3.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("3.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart9") && (textBox7.Text == "" || textBox7.Text == null || !(int.TryParse(textBox7.Text, out int n9))))
                 {
-                    throw new FormatException("3.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("3.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -194,135 +194,136 @@ namespace AStarAlgorithmFor8PuzzleGame
             {
                 if (txtbxNumber.Equals("txtbxstart10") && (textBox10.Text == "" || textBox10.Text == null || !(int.TryParse(textBox10.Text, out int n1))))
                 {
-                    throw new FormatException("1.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("1.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart11") && (textBox11.Text == "" || textBox11.Text == null || !(int.TryParse(textBox11.Text, out int n2))))
                 {
-                    throw new FormatException("1.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("1.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart12") && (textBox12.Text == "" || textBox12.Text == null || !(int.TryParse(textBox12.Text, out int n3))))
                 {
-                    throw new FormatException("1.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("1.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart13") && (textBox13.Text == "" || textBox13.Text == null || !(int.TryParse(textBox13.Text, out int n4))))
                 {
-                    throw new FormatException("2.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("2.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart14") && (textBox14.Text == "" || textBox14.Text == null || !(int.TryParse(textBox14.Text, out int n5))))
                 {
-                    throw new FormatException("2.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("2.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart15") && (textBox15.Text == "" || textBox15.Text == null || !(int.TryParse(textBox15.Text, out int n6))))
                 {
-                    throw new FormatException("2.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("2.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart16") && (textBox16.Text == "" || textBox16.Text == null || !(int.TryParse(textBox16.Text, out int n7))))
                 {
-                    throw new FormatException("3.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("3.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart17") && (textBox17.Text == "" || textBox17.Text == null || !(int.TryParse(textBox17.Text, out int n8))))
                 {
-                    throw new FormatException("3.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("3.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (txtbxNumber.Equals("txtbxstart18") && (textBox18.Text == "" || textBox18.Text == null || !(int.TryParse(textBox18.Text, out int n9))))
                 {
-                    throw new FormatException("3.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("3.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void button_start_Click(object sender, EventArgs e)
         {
             checkAllInputs();
+            String test = "Information cannot be left blank or a string expression cannot be written.";
         }
 
-
+        
         private void checkAllInputs()
         {
             try
             {
                 if (textBox1.Text == "" || textBox1.Text == null || !(int.TryParse(textBox1.Text, out int n1)))
                 {
-                    throw new FormatException("Baslangic Durumu 1.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Initial State 1.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox2.Text == "" || textBox2.Text == null || !(int.TryParse(textBox2.Text, out int n2)))
                 {
-                    throw new FormatException("Baslangic Durumu 1.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Initial State 1.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox3.Text == "" || textBox3.Text == null || !(int.TryParse(textBox3.Text, out int n3)))
                 {
-                    throw new FormatException("Baslangic Durumu 1.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Initial State 1.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox6.Text == "" || textBox6.Text == null || !(int.TryParse(textBox6.Text, out int n4)))
                 {
-                    throw new FormatException("Baslangic Durumu 2.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Initial State 2.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox5.Text == "" || textBox5.Text == null || !(int.TryParse(textBox5.Text, out int n5)))
                 {
-                    throw new FormatException("Baslangic Durumu 2.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Initial State 2.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox4.Text == "" || textBox4.Text == null || !(int.TryParse(textBox4.Text, out int n6)))
                 {
-                    throw new FormatException("Baslangic Durumu 2.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Initial State 2.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox9.Text == "" || textBox9.Text == null || !(int.TryParse(textBox9.Text, out int n7)))
                 {
-                    throw new FormatException("Baslangic Durumu 3.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Initial State 3.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox8.Text == "" || textBox8.Text == null || !(int.TryParse(textBox8.Text, out int n8)))
                 {
-                    throw new FormatException("Baslangic Durumu 3.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Initial State 3.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox7.Text == "" || textBox7.Text == null || !(int.TryParse(textBox7.Text, out int n9)))
                 {
-                    throw new FormatException("Baslangic Durumu 3.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Initial State 3.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
 
 
                 if (textBox10.Text == "" || textBox10.Text == null || !(int.TryParse(textBox10.Text, out int n10)))
                 {
-                    throw new FormatException("Bitis Durumu 1.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Goal State 1.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox11.Text == "" || textBox11.Text == null || !(int.TryParse(textBox11.Text, out int n11)))
                 {
-                    throw new FormatException("Bitis Durumu 1.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Goal State 1.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox12.Text == "" || textBox12.Text == null || !(int.TryParse(textBox12.Text, out int n12)))
                 {
-                    throw new FormatException("Bitis Durumu 1.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Goal State 1.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox13.Text == "" || textBox13.Text == null || !(int.TryParse(textBox13.Text, out int n13)))
                 {
-                    throw new FormatException("Bitis Durumu 2.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Goal State 2.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox14.Text == "" || textBox14.Text == null || !(int.TryParse(textBox14.Text, out int n14)))
                 {
-                    throw new FormatException("Bitis Durumu 2.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Goal State 2.Row  2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox15.Text == "" || textBox15.Text == null || !(int.TryParse(textBox15.Text, out int n15)))
                 {
-                    throw new FormatException("Bitis Durumu 2.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Goal State 2.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox16.Text == "" || textBox16.Text == null || !(int.TryParse(textBox16.Text, out int n16)))
                 {
-                    throw new FormatException("Bitis Durumu 3.Satir 1.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Goal State 3.Row 1.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox17.Text == "" || textBox17.Text == null || !(int.TryParse(textBox17.Text, out int n17)))
                 {
-                    throw new FormatException("Bitis Durumu 3.Satir 2.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Goal State 3.Row 2.Column Information cannot be left blank or a string expression cannot be written.");
                 }
                 if (textBox18.Text == "" || textBox18.Text == null || !(int.TryParse(textBox18.Text, out int n18)))
                 {
-                    throw new FormatException("Bitis Durumu 3.Satir 3.Kolon bilgisi bos birakilamaz veya string ifade yazilamaz...");
+                    throw new FormatException("Goal State 3.Row 3.Column Information cannot be left blank or a string expression cannot be written.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
