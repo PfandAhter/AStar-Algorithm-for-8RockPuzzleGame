@@ -16,8 +16,9 @@ namespace AStarAlgorithmFor8PuzzleGame
         public int h { get; set; }
         public int f => g + h;
         public BoardState parent { get; set; }
+        public List<BoardState> possibleMoves { get; private set; }
         public String lastMove { get; set; }
-
+        
         public BoardState(int[,] initialState)
         {
             tiles = new Tile[3, 3];
@@ -143,10 +144,8 @@ namespace AStarAlgorithmFor8PuzzleGame
                     possibleMoves.Add(newBoardState);
                 }
             }
+            this.possibleMoves = possibleMoves;
             return possibleMoves;
         }
-
-
-
     }
 }
