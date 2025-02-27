@@ -114,6 +114,7 @@ namespace AStarAlgorithmFor8PuzzleGame
                 return;
             }
             button_stop.Visible = true;
+            button_stop.Enabled = true;
             inGame = true;
 
             int[,] startState = getStartState();
@@ -306,6 +307,7 @@ namespace AStarAlgorithmFor8PuzzleGame
             if (boardState.possibleMoves == null || boardState.possibleMoves.Count == 0)
             {
                 changeEnableInputs(true);
+                button_stop.Enabled = false;
                 inGame = false;
                 return; // Burada belki en son bosluk degerinin eski rengine donmesi saglanabilir...
             }
@@ -335,7 +337,6 @@ namespace AStarAlgorithmFor8PuzzleGame
 
             /*this.Controls["button_start"].Enabled = enable;
             this.Controls["button10"].Enabled = enable;*/
-
 
             // BUTTON 10 ENABLED FALSE YAPTIGIMIZ ZAMAN FONT COLOR DEGISTIGI ICIN INGAME GIBI BIR METHOD EKLE... BU INGAME
             //KISMI START BASLADIGINDA IF ICINDE KONTROL ET EGER TRUE ISE RETURN ETSIN YANI BUTONLAR BASILABILIR AMA ISLEVSIZ OLUR..
