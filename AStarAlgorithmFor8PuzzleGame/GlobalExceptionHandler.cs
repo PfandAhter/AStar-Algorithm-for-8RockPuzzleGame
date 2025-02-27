@@ -122,7 +122,6 @@ namespace AStarAlgorithmFor8PuzzleGame
             }
         }
 
-
         private void checkAllInputs()
         {
             try

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace AStarAlgorithmFor8PuzzleGame
 {
@@ -17,12 +18,16 @@ namespace AStarAlgorithmFor8PuzzleGame
 
         private bool inGame = false;
 
+        private string thema = "#082c30";
+
         private static GlobalExceptionHandler exceptionHandler;
+
+        private const int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
 
         public GameForm()
         {
             InitializeComponent();
-            
+
             exceptionHandler = new GlobalExceptionHandler(this);
 
             shiftableButton = new Button();
@@ -32,17 +37,20 @@ namespace AStarAlgorithmFor8PuzzleGame
             shiftableButton.FlatStyle = FlatStyle.Flat;
             this.Controls.Add(shiftableButton);
             shiftableButton.BringToFront();
-            this.BackColor = ColorTranslator.FromHtml("#082c30");
+            this.BackColor = ColorTranslator.FromHtml(thema);
+
+            // Change the title bar color
+            IntPtr hWnd = this.Handle;
+            int attrValue = 2; // 2 = dark mode, 1 = light mode
+            DwmSetWindowAttribute(hWnd, DWMWA_USE_IMMERSIVE_DARK_MODE, ref attrValue, sizeof(int));
         }
+        [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+
+        private static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
 
         private void button10_Click(object sender, EventArgs e)
         {
             //CLEAR INPUTS HERE..
-            if (inGame)
-            {
-                return;
-            }
-
             GameForm gameForm = new GameForm();
             this.Hide();
             gameForm.ShowDialog();
@@ -78,7 +86,9 @@ namespace AStarAlgorithmFor8PuzzleGame
                 string textBoxName = textBox.Name.ToLower();
                 int.TryParse(textBoxName.Replace("textbox", ""), out int number);
                 string checkName = "txtbxstart" + textBoxName.Replace("textbox", "");
-                
+
+                Button button = (Button)(this.Controls["Button" + number]);
+
                 if(number > 9)
                 {
                     exceptionHandler.checkGoalTextBox(checkName);
@@ -86,6 +96,17 @@ namespace AStarAlgorithmFor8PuzzleGame
                 else
                 {
                     exceptionHandler.checkStartTextBox(checkName);
+
+                    if(textBox.Text == "0")
+                    {
+                        button.Visible = false;
+                    }
+                    else
+                    {
+                        button.Visible = true;
+                    }
+
+                    button.Text = textBox.Text;
                 }
                 
                 if(number == 18)
@@ -113,15 +134,15 @@ namespace AStarAlgorithmFor8PuzzleGame
             {
                 return;
             }
-            button_stop.Visible = true;
-            button_stop.Enabled = true;
-            inGame = true;
-
-            int[,] startState = getStartState();
-            int[,] goalState = getGoalState();
-
             try
             {
+                int[,] startState = getStartState();
+                int[,] goalState = getGoalState();
+                inGame = true;
+
+                button_stop.Visible = true;
+                button_stop.Enabled = true;
+
                 exceptionHandler.checkAllTextBox();
 
                 if (startState == goalState)
@@ -130,7 +151,6 @@ namespace AStarAlgorithmFor8PuzzleGame
                 }
 
                 var elementsInMatrix2 = goalState.Cast<int>().ToList();
-
 
                 foreach (int item in startState)
                 {
@@ -167,17 +187,30 @@ namespace AStarAlgorithmFor8PuzzleGame
         {
             int[,] startState = new int[3, 3];
 
+            bool includeZero = false;
+
             for (int i = 0; i < 3; i++)
             {
                 for (int k = 0; k < 3; k++)
                 {
                     int.TryParse(this.Controls["textBox" + (i * 3 + k + 1)].Text, out int number);
 
+                    if (number == 0)
+                    {
+                        includeZero = true;
+                    }
+
                     startState[i, k] = number;
                 }
             }
-
-            return startState;
+            if (!includeZero)
+            {
+                throw new FormatException("Initial state must include zero.");
+            }
+            else
+            {
+                return startState;
+            }
         }
 
         private int[,] getGoalState()
@@ -259,13 +292,12 @@ namespace AStarAlgorithmFor8PuzzleGame
 
                 int oldIndex = oldPosition[0] * 3 + oldPosition[1] + 1;
                 int newIndex = newPosition[0] * 3 + newPosition[1] + 1;
-                this.Controls["Button" + newIndex].BackColor = Color.Purple;
-
+                Button newButton = (Button)(this.Controls["Button" + newIndex]);
+                newButton.BackColor = ColorTranslator.FromHtml(thema);
                 Button oldButton = (Button)(this.Controls["Button" + oldIndex]);
+                
                 oldButton.Visible = false;
                 System.Threading.Thread.Sleep(1000);
-                
-                Button newButton = (Button)(this.Controls["Button" + newIndex]);                
 
                 shiftableButton.Size = newButton.Size;
                 shiftableButton.Location = newButton.Location;
@@ -277,7 +309,6 @@ namespace AStarAlgorithmFor8PuzzleGame
                 shiftableButton.Visible = true;
 
                 newButton.Visible = false;
-
                 System.Threading.Thread.Sleep(1000);
                 shiftButton(shiftableButton, oldButton);
 
@@ -293,12 +324,16 @@ namespace AStarAlgorithmFor8PuzzleGame
                 for (int k = 0; k < 3; k++)
                 {
                     int number = boardState.tiles[i, k].Value;
-
                     int index = i * 3 + k + 1;
-                    this.Controls["Button" + index].Text = number.ToString();
-
-                    if(number != 0)
+                    
+                    if(number == 0)
                     {
+                        this.Controls["Button" + index].Text = "";
+                        this.Controls["Button" + index].Visible = false;
+                    }
+                    else
+                    {
+                        this.Controls["Button" + index].Text = number.ToString();
                         this.Controls["Button" + index].BackColor = SystemColors.ControlDark;
                     }
                 }
@@ -344,18 +379,19 @@ namespace AStarAlgorithmFor8PuzzleGame
 
         private void button_stop_Click(object sender, EventArgs e)
         {
-            if(button_stop.Text == "STOP")
+            if(button_stop.Text == "PAUSE")
             {
                 timer1.Stop();
-                button_stop.Text = "START";
+                button_stop.Text = "CONTINUE";
                 button_stop.BackColor = Color.Green;
             }
             else
             {
                 timer1.Start();
-                button_stop.Text = "STOP";
+                button_stop.Text = "PAUSE";
                 button_stop.BackColor = Color.Maroon;
             }
         }
+
     }
 }
